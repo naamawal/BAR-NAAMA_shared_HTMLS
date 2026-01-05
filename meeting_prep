@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: #f8fafc; margin: 0; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <!-- Main Container Table -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+        
+        <!-- HEADER SECTION -->
+        <tr>
+            <td style="background-color: #0f172a; padding: 30px; color: #ffffff;">
+                <p style="color: #60a5fa; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 5px 0;">Customer Intelligence Briefing</p>
+                <!-- REPLACE {{1.company_name}} WITH YOUR MODULE 1 BUBBLE -->
+                <h1 style="font-size: 28px; font-weight: 700; margin: 0;">{{1.company_name}}</h1>
+                <!-- REPLACE BUBBLES BELOW WITH MODULE 2 DATA -->
+                <p style="font-size: 14px; color: #94a3b8; margin: 5px 0 0 0;">{{2.Lifecycle Stage (Planhat)}} | {{2.ARR (CRM)}}</p>
+            </td>
+        </tr>
+
+        <!-- ACCOUNT VITALS GRID -->
+        <tr>
+            <td style="padding: 20px; background-color: #f1f5f9;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="33%" style="padding: 5px;">
+                            <div style="background-color: #ffffff; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                                <p style="font-size: 9px; color: #64748b; font-weight: 800; text-transform: uppercase; margin: 0;">Health</p>
+                                <p style="font-size: 18px; font-weight: 800; color: #10b981; margin: 5px 0 0 0;">{{2.Health Score (Planhat)}}</p>
+                            </div>
+                        </td>
+                        <td width="33%" style="padding: 5px;">
+                            <div style="background-color: #ffffff; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                                <p style="font-size: 9px; color: #64748b; font-weight: 800; text-transform: uppercase; margin: 0;">Sentiment</p>
+                                <p style="font-size: 18px; font-weight: 800; color: #8b5cf6; margin: 5px 0 0 0;">{{2.Gong Sentiment (Gong)}}</p>
+                            </div>
+                        </td>
+                        <td width="33%" style="padding: 5px;">
+                            <div style="background-color: #ffffff; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                                <p style="font-size: 9px; color: #64748b; font-weight: 800; text-transform: uppercase; margin: 0;">Tickets</p>
+                                <p style="font-size: 18px; font-weight: 800; color: #ef4444; margin: 5px 0 0 0;">{{2.Ticket Volume (L30D) (Freshdesk)}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- MAIN AI ANALYSIS AREA -->
+        <tr>
+            <td style="padding: 30px; vertical-align: top;">
+                <h2 style="font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 15px 0;">30-Day Executive Summary</h2>
+                
+                <!-- THIS IS WHERE THE GEMINI RESEARCH GOES -->
+                <!-- REPLACE {{5.text}} WITH YOUR GEMINI MODULE BUBBLE -->
+                <div style="font-size: 14px; line-height: 1.6; color: #334155; border-left: 4px solid #3b82f6; padding-left: 20px; white-space: pre-line;">
+                    {{5.text}}
+                </div>
+
+                <!-- FOOTER / ACCOUNT DETAILS -->
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #f1f5f9;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <p style="font-size: 10px; color: #94a3b8; font-weight: bold; margin: 0;">PRIMARY CONTACT</p>
+                                <p style="font-size: 13px; color: #1e293b; font-weight: 600; margin: 2px 0 0 0;">{{2.first_name}} {{2.last_name}}</p>
+                            </td>
+                            <td style="text-align: right;">
+                                <p style="font-size: 10px; color: #94a3b8; font-weight: bold; margin: 0;">RENEWAL DATE</p>
+                                <p style="font-size: 13px; color: #1e293b; font-weight: 600; margin: 2px 0 0 0;">{{2.Renewal Date (CRM)}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
